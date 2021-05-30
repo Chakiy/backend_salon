@@ -10,6 +10,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 
@@ -30,7 +31,7 @@ class CustomerCrudController extends AbstractCrudController
             TextField::new('password')->hideOnindex(),
             TextField::new('email'),
             IntegerField::new('gsm'),
-            TextField::new('about')->setRequired(false),
+            TextAreaField::new('about')->setRequired(false),
             TextField::new('sex')->hideOnForm(),
             ChoiceField::new('sex')->setChoices(["man"=>"man", "vrouw"=>"vrouw"])->hideOnIndex(),
             DateField::new('bday'),

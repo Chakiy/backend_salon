@@ -33,7 +33,7 @@ class Customer implements UserInterface
      * @ORM\Column(type="string", length=180, unique=true)
      * @Assert\NotBlank()
      * @Assert\Email()
-         * @Groups({"user:read", "user:write", "address:read"})
+     * @Groups({"user:read", "user:write", "address:read"})
      */
     private $email;
 
@@ -64,7 +64,7 @@ class Customer implements UserInterface
     private $lastName;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      * @Assert\NotBlank()
      * @Groups({"user:read", "user:write"})
      */
